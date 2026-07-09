@@ -38,7 +38,7 @@ export default function ProjectTimelineStep({ step, index }: ProjectTimelineStep
       </div>
 
       {/* Content box left (even indices) */}
-      <div className={`w-full md:w-[45%] pl-16 md:pl-0 ${isEven ? 'md:pr-12 md:text-right' : 'md:opacity-0 md:pointer-events-none md:order-last'}`}>
+      <div className={`w-full md:w-[45%] pl-16 md:pl-0 ${isEven ? 'md:pr-12 md:text-right' : 'hidden md:block md:opacity-0 md:pointer-events-none md:order-last'}`}>
         <motion.div
           initial={{ opacity: 0, x: isEven ? -50 : 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ export default function ProjectTimelineStep({ step, index }: ProjectTimelineStep
       <div className="hidden md:block w-12 h-12 shrink-0" />
 
       {/* Content box right (odd indices) */}
-      <div className={`w-full md:w-[45%] pl-16 md:pl-0 ${!isEven ? 'md:pl-12 md:text-left' : 'md:opacity-0 md:pointer-events-none'}`}>
+      <div className={`w-full md:w-[45%] pl-16 md:pl-0 ${!isEven ? 'md:pl-12 md:text-left' : 'hidden md:block md:opacity-0 md:pointer-events-none'}`}>
         <motion.div
           initial={{ opacity: 0, x: !isEven ? 50 : -50 }}
           whileInView={{ opacity: 1, x: 0 }}
