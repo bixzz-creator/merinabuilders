@@ -27,6 +27,28 @@ export default function ServicesOverviewSection() {
     }
   };
 
+  const renderSplitTitle = (text: string) => {
+    const words = text.split(' ');
+    if (words.length <= 1) return text;
+    
+    const goldCount = Math.max(1, Math.floor(words.length * 0.4));
+    const blackCount = words.length - goldCount;
+    
+    const blackPart = words.slice(0, blackCount).join(' ');
+    const goldPart = words.slice(blackCount).join(' ');
+    
+    return (
+      <>
+        <span className="text-ivory group-hover:text-gold transition-colors duration-300">
+          {blackPart}
+        </span>{' '}
+        <span className="text-gradient-gold italic">
+          {goldPart}
+        </span>
+      </>
+    );
+  };
+
   return (
     <section className="section-padding bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,8 +97,8 @@ export default function ServicesOverviewSection() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-gradient-gold tracking-wide mb-4 group-hover:text-gold transition-colors duration-300">
-                    {service.title}
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display tracking-wide mb-4">
+                    {renderSplitTitle(service.title)}
                   </h3>
 
                   {/* Description */}

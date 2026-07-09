@@ -393,20 +393,10 @@ export default function Navbar() {
                   aria-label="Open navigation menu"
                 />
               }>
-                <AnimatePresence mode="wait" initial={false}>
-                  {mobileOpen ? (
-                    <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                      <X className="w-6 h-6" />
-                    </motion.div>
-                  ) : (
-                    <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                      <Menu className="w-6 h-6" />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <Menu className="w-6 h-6" />
               </SheetTrigger>
 
-              <SheetContent side="right" className="w-[320px] bg-navy border-l border-gold/10 p-0 flex flex-col">
+              <SheetContent showCloseButton={false} side="right" className="w-[320px] bg-navy border-l border-gold/10 p-0 flex flex-col">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
 
                 {/* Mobile header */}
