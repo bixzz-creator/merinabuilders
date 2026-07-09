@@ -159,7 +159,7 @@ export default function About() {
 
                   {/* Info */}
                   <div className="relative z-10 w-full">
-                    <h3 className="text-2xl sm:text-3xl font-bold font-display text-gradient-gold tracking-wide">
+                    <h3 className="text-2xl sm:text-3xl font-bold font-display text-black tracking-wide">
                       {founder.name}
                     </h3>
                     <p className="text-xs uppercase tracking-widest text-ivory/60 font-semibold mt-1.5">

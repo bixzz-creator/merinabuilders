@@ -219,7 +219,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="px-5 py-2 rounded-full bg-gold/10 text-gold text-xs font-semibold uppercase tracking-[0.2em] border border-gold/25 mb-8"
+              className="hidden md:inline-block px-5 py-2 rounded-full bg-gold/10 text-gold text-xs font-semibold uppercase tracking-[0.2em] border border-gold/25 mb-8"
             >
               Premium Construction Company
             </motion.span>
