@@ -65,10 +65,10 @@ export default function About() {
                   20 Years of Constructing Excellence
                 </h2>
                 <p className="text-[17px] sm:text-[19px] md:text-[20px] text-ivory/85 leading-relaxed font-light text-justify">
-                  Established in 2011, Merina Builders began with a simple vision: to construct spaces that elevate lifestyles and build trust with every concrete block. Today, we stand as one of South India's premier boutique construction companies, known for luxury finishes and robust engineering.
+                  Established in <strong>2011</strong>, <strong>Merina Builders</strong> began with a simple vision: to construct spaces that <strong>elevate lifestyles</strong> and <strong>build trust</strong> with every concrete block. Today, we stand as one of South India's <strong>premier boutique construction companies</strong>, known for <strong>luxury finishes</strong> and <strong>robust engineering</strong>.
                 </p>
                 <p className="text-[17px] sm:text-[19px] md:text-[20px] text-ivory/85 leading-relaxed font-light text-justify">
-                  We specialize in custom residential villa builds, large commercial park complexes, and heritage restorations. By integrating modern BIM planning, strict ISO guidelines, and premium materials, we eliminate uncertainty and bring architectural blueprints to life seamlessly.
+                  We specialize in <strong>custom residential villa builds</strong>, large <strong>commercial park complexes</strong>, and <strong>heritage restorations</strong>. By integrating modern <strong>BIM planning</strong>, strict <strong>ISO guidelines</strong>, and <strong>premium materials</strong>, we eliminate uncertainty and bring architectural blueprints to life seamlessly.
                 </p>
               </RevealOnScroll>
 
@@ -101,7 +101,7 @@ export default function About() {
                   Our Mission
                 </h3>
                 <p className="text-[14px] sm:text-[15px] text-ivory/80 leading-relaxed font-light text-justify">
-                  To build premium quality, sustainable, and design-forward structures while ensuring complete financial transparency, on-time delivery, and 100% client satisfaction.
+                  To build <strong>premium quality</strong>, <strong>sustainable</strong>, and <strong>design-forward structures</strong> while ensuring complete <strong>financial transparency</strong>, <strong>on-time delivery</strong>, and <strong>100% client satisfaction</strong>.
                 </p>
               </RevealOnScroll>
 
@@ -114,7 +114,7 @@ export default function About() {
                   Our Vision
                 </h3>
                 <p className="text-[14px] sm:text-[15px] text-ivory/80 leading-relaxed font-light text-justify">
-                  To be the most trusted name in luxury construction across South India, recognized for structural innovation, environmental compliance, and premium craftsmanship.
+                  To be the <strong>most trusted name</strong> in <strong>luxury construction</strong> across South India, recognized for <strong>structural innovation</strong>, <strong>environmental compliance</strong>, and <strong>premium craftsmanship</strong>.
                 </p>
               </RevealOnScroll>
             </div>
