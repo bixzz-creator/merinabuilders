@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy-light border-t border-gold/10" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
@@ -77,7 +77,24 @@ export default function Footer() {
             <h3 className="text-ivory font-semibold mb-4 font-display">Services</h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.services.map((link) => (
-                <li key={link.label}>
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    className="text-ivory/60 hover:text-gold hover:translate-x-1 block transition-all duration-300 text-sm"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Locations & Legal */}
+          <div>
+            <h3 className="text-ivory font-semibold mb-4 font-display">Service Areas</h3>
+            <ul className="space-y-3">
+              {FOOTER_LINKS.locations.map((link) => (
+                <li key={link.href}>
                   <Link
                     to={link.href}
                     className="text-ivory/60 hover:text-gold hover:translate-x-1 block transition-all duration-300 text-sm"

@@ -3,10 +3,26 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import ProjectTimelineStep from '@/components/ui/ProjectTimelineStep';
 import { processSteps } from '@/data/process';
 import processBg from '@/assets/images/hero-construction.png';
+import SEO from '@/components/ui/SEO';
 
 export default function OurProcess() {
+  const processSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://merinabuilders.in/our-process#webpage",
+    "name": "Our Construction Process | Merina Builders",
+    "description": "From planning to handover — discover our systematic 6-step construction process that ensures quality, transparency, and on-time delivery.",
+    "url": "https://merinabuilders.in/our-process"
+  };
+
   return (
     <PageTransition>
+      <SEO
+        title="Our Construction Process | Turnkey Building Stages"
+        description="From planning to handover — discover our systematic 6-step construction process that ensures quality, transparency, and on-time delivery."
+        keywords="Construction Process, Turnkey Construction Stages, Building Timeline, Civil Engineering Management"
+        schema={processSchema}
+      />
       <main className="w-full relative pt-20">
         {/* Banner Section */}
         <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center bg-navy">

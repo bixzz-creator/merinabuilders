@@ -25,11 +25,20 @@ export const FOOTER_LINKS = {
     { label: 'About Us', href: '/about' },
     { label: 'Our Process', href: '/our-process' },
     { label: 'Budget Estimator', href: '/estimator' },
+    { label: 'Our Blog', href: '/blog' },
   ],
   services: [
-    { label: 'Commercial', href: '/services#commercial' },
-    { label: 'Renovation', href: '/services#renovation' },
-    { label: 'Project Management', href: '/services#project-management' },
+    { label: 'Commercial Construction', href: '/services/commercial-construction' },
+    { label: 'Residential Construction', href: '/services/residential-construction' },
+    { label: 'Renovation & Remodeling', href: '/services/renovation-remodeling' },
+    { label: 'Church Construction', href: '/services/church-construction' },
+  ],
+  locations: [
+    { label: 'Thanjavur', href: '/location/thanjavur' },
+    { label: 'Kumbakonam', href: '/location/kumbakonam' },
+    { label: 'Papanasam', href: '/location/papanasam' },
+    { label: 'Pasupathikovil', href: '/location/pasupathikovil' },
+    { label: 'Orathanadu', href: '/location/orathanadu' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy-policy' },

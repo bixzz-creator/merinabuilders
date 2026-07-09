@@ -60,6 +60,7 @@ export interface BlogPost {
   date: string;
   readTime: string;
   image: string;
+  content?: string;
 }
 
 export interface CareerPosition {
@@ -83,4 +84,33 @@ export interface ContactMethod {
   description: string;
   action: string;
   actionLabel: string;
+}
+
+export interface ProcessStepDetail {
+  title: string;
+  desc: string;
+}
+
+export interface ServiceHighlight {
+  val: string;
+  label: string;
+}
+
+export interface DetailedService {
+  id: string;
+  badge: string;
+  title: string;
+  titleBlack: string;
+  titleGold: string;
+  intro: string;
+  description: string;
+  image: string;
+  iconName: string;
+  deliverables: string[];
+  process: ProcessStepDetail[];
+  whyChooseUs: string[];
+  highlights: ServiceHighlight[];
+  ctaText: string;
+  ctaLink: string;
+  keywords?: string;
 }

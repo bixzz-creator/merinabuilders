@@ -23,6 +23,10 @@ const PrivacyPolicy = lazy(() => import('@/pages/PrivacyPolicy'));
 const Terms = lazy(() => import('@/pages/Terms'));
 const Estimator = lazy(() => import('@/pages/Estimator'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
+const LocationLanding = lazy(() => import('@/pages/LocationLanding'));
+const ServiceDetail = lazy(() => import('@/pages/ServiceDetail'));
+const BlogList = lazy(() => import('@/pages/BlogList'));
+const BlogPost = lazy(() => import('@/pages/BlogPost'));
 
 export default function App() {
   const location = useLocation();
@@ -46,13 +50,16 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/services/:serviceId" element={<ServiceDetail />} />
+                <Route path="/location/:locationId" element={<LocationLanding />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/our-process" element={<OurProcess />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/faq" element={<FAQ />} />
-                <Route path="/blog" element={<Navigate to="/" replace />} />
+                <Route path="/blog" element={<BlogList />} />
+                <Route path="/blog/:blogId" element={<BlogPost />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/estimator" element={<Estimator />} />
