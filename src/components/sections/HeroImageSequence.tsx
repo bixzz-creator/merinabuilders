@@ -6,11 +6,11 @@ import { useImagePreloader } from '@/components/hooks/useImagePreloader';
 import { FRAME_CONFIG, CHAPTERS, getFrameUrl } from '@/constants/frameSequenceConfig';
 import ChapterOverlay from '@/components/sections/ChapterOverlay';
 import { COMPANY_NAME } from '@/constants/navigation';
+import HeroSection from '@/components/sections/HeroSection';
 
 gsap.registerPlugin(ScrollTrigger);
 
 // ── Loading Overlay ─────────────────────────────────────────────────────────
-
 function LoadingOverlay({ progress }: { progress: number }) {
   const percent = Math.round(progress * 100);
 
@@ -21,11 +21,9 @@ function LoadingOverlay({ progress }: { progress: number }) {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-[#0A0E14]"
     >
-      {/* Subtle radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(200,167,80,0.06),transparent_70%)]" />
 
       <div className="relative flex flex-col items-center gap-8">
-        {/* Brand mark */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -39,7 +37,6 @@ function LoadingOverlay({ progress }: { progress: number }) {
           />
         </motion.div>
 
-        {/* Progress bar */}
         <div className="w-48 sm:w-64">
           <div className="h-[2px] w-full bg-white/10 rounded-full overflow-hidden">
             <motion.div
@@ -59,7 +56,6 @@ function LoadingOverlay({ progress }: { progress: number }) {
 }
 
 // ── Scroll Indicator ────────────────────────────────────────────────────────
-
 function ScrollIndicator() {
   return (
     <motion.div
@@ -87,9 +83,8 @@ function ScrollIndicator() {
   );
 }
 
-// ── Main Component ──────────────────────────────────────────────────────────
-
-export default function HeroImageSequence() {
+// ── Canvas Storytelling Component ───────────────────────────────────────────
+function CanvasStorytelling() {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pinnedRef = useRef<HTMLDivElement>(null);
@@ -100,7 +95,6 @@ export default function HeroImageSequence() {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
-  // Detect reduced motion preference
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
     setPrefersReducedMotion(mq.matches);
@@ -109,14 +103,12 @@ export default function HeroImageSequence() {
     return () => mq.removeEventListener('change', handler);
   }, []);
 
-  // Determine active chapter based on current frame
   const activeChapter = useMemo(() => {
     return CHAPTERS.find(
       (ch) => currentFrame >= ch.frameStart && currentFrame <= ch.frameEnd
     ) ?? null;
   }, [currentFrame]);
 
-  // ── Canvas draw function ────────────────────────────────────────────────
   const drawFrame = useCallback((frameIndex: number) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -131,14 +123,12 @@ export default function HeroImageSequence() {
     const displayWidth = canvas.clientWidth;
     const displayHeight = canvas.clientHeight;
 
-    // Only resize the canvas buffer if dimensions changed
     if (canvas.width !== displayWidth * dpr || canvas.height !== displayHeight * dpr) {
       canvas.width = displayWidth * dpr;
       canvas.height = displayHeight * dpr;
       ctx.scale(dpr, dpr);
     }
 
-    // Clear and draw with "contain" scaling (letterbox/pillarbox)
     ctx.clearRect(0, 0, displayWidth, displayHeight);
 
     const imgAspect = img.naturalWidth / img.naturalHeight;
@@ -150,19 +140,11 @@ export default function HeroImageSequence() {
     let drawY: number;
 
     if (canvasAspect > imgAspect) {
-      // Canvas is wider — fit to height, center horizontally (cover behavior for cinematic feel)
-      drawHeight = displayHeight;
-      drawWidth = displayHeight * imgAspect;
-      drawX = (displayWidth - drawWidth) / 2;
-      drawY = 0;
-
-      // Use cover instead of contain for cinematic full-bleed
       drawWidth = displayWidth;
       drawHeight = displayWidth / imgAspect;
       drawX = 0;
       drawY = (displayHeight - drawHeight) / 2;
     } else {
-      // Canvas is taller — fit to width, center vertically
       drawWidth = displayWidth;
       drawHeight = displayWidth / imgAspect;
       drawX = 0;
@@ -172,13 +154,11 @@ export default function HeroImageSequence() {
     ctx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
   }, [images]);
 
-  // ── Canvas resize observer ──────────────────────────────────────────────
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const observer = new ResizeObserver(() => {
-      // Force re-draw on resize
       drawFrame(currentFrameRef.current);
     });
 
@@ -186,14 +166,12 @@ export default function HeroImageSequence() {
     return () => observer.disconnect();
   }, [drawFrame]);
 
-  // ── Draw first frame once ready ─────────────────────────────────────────
   useEffect(() => {
     if (isReady) {
       drawFrame(0);
     }
   }, [isReady, drawFrame]);
 
-  // ── GSAP ScrollTrigger setup ────────────────────────────────────────────
   useEffect(() => {
     if (!isReady || prefersReducedMotion) return;
 
@@ -202,8 +180,6 @@ export default function HeroImageSequence() {
     if (!container || !pinned) return;
 
     const totalFrames = FRAME_CONFIG.totalFrames;
-
-    // Proxy object to tween the frame index smoothly
     const frameObj = { frame: 0 };
 
     const anim = gsap.to(frameObj, {
@@ -214,7 +190,7 @@ export default function HeroImageSequence() {
         pin: pinned,
         start: 'top top',
         end: 'bottom bottom',
-        scrub: 1.2, // Beautiful momentum/smoothing factor
+        scrub: 1.2,
       },
       onUpdate: () => {
         const frameIndex = Math.min(
@@ -225,7 +201,6 @@ export default function HeroImageSequence() {
         if (frameIndex !== currentFrameRef.current) {
           currentFrameRef.current = frameIndex;
 
-          // Use rAF for smooth canvas updates
           if (rafIdRef.current) {
             cancelAnimationFrame(rafIdRef.current);
           }
@@ -245,7 +220,6 @@ export default function HeroImageSequence() {
     };
   }, [isReady, prefersReducedMotion, drawFrame]);
 
-  // ── Reduced motion fallback ─────────────────────────────────────────────
   if (prefersReducedMotion) {
     return (
       <section className="relative w-full h-screen overflow-hidden bg-[#0A0E14]">
@@ -273,18 +247,15 @@ export default function HeroImageSequence() {
       className="relative w-full bg-[#0A0E14]"
       style={{ height: FRAME_CONFIG.scrollHeight }}
     >
-      {/* Pinned viewport container */}
       <div
         ref={pinnedRef}
         className="relative w-full overflow-hidden"
         style={{ height: '100vh' }}
       >
-        {/* Loading overlay */}
         <AnimatePresence>
           {!isReady && <LoadingOverlay progress={progress} />}
         </AnimatePresence>
 
-        {/* Canvas */}
         <canvas
           ref={canvasRef}
           className="hero-sequence-canvas"
@@ -292,15 +263,37 @@ export default function HeroImageSequence() {
           aria-label="Cinematic construction sequence — scroll to progress through the building journey"
         />
 
-        {/* Top gradient for navbar readability */}
         <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-black/85 via-black/30 to-transparent z-30 pointer-events-none" />
 
-        {/* Chapter overlays */}
         {isReady && <ChapterOverlay chapter={activeChapter} />}
 
-        {/* Scroll indicator — only show when loaded and near the start */}
         {isReady && currentFrame < 10 && <ScrollIndicator />}
       </div>
     </section>
   );
+}
+
+// ── Entry Shell Component (handles responsive routing) ──────────────────────
+export default function HeroImageSequence() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const mq = window.matchMedia('(max-width: 767px)');
+    const handleResize = (e: MediaQueryListEvent | MediaQueryList) => {
+      setIsMobile(e.matches);
+    };
+
+    handleResize(mq);
+
+    mq.addEventListener('change', handleResize);
+    return () => mq.removeEventListener('change', handleResize);
+  }, []);
+
+  if (isMobile) {
+    return <HeroSection />;
+  }
+
+  return <CanvasStorytelling />;
 }
