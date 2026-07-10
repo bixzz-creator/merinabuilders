@@ -53,3 +53,4 @@ dist-ssr
 !.env.example
 node_modules
 dist
+.wrangler
