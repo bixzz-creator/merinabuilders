@@ -120,7 +120,7 @@ function MickyMascot({ state, size = 'md' }: MickyMascotProps) {
   const dims = {
     sm: 'w-8 h-8',
     md: 'w-10 h-10',
-    lg: 'w-14 h-14',
+    lg: 'w-full h-full',
   }[size];
 
   const isRobot = state === 'idle' || state === 'thinking';
@@ -821,7 +821,7 @@ export default function AIChatAssistant() {
             aria-label="Open AI Assistant"
           >
             {/* Circular logo container */}
-            <div className="w-full h-full p-2.5 relative overflow-visible flex items-center justify-center">
+            <div className="w-full h-full p-1 relative overflow-visible flex items-center justify-center">
               <MickyMascot state="idle" size="lg" />
             </div>
             {/* Notification pulse */}

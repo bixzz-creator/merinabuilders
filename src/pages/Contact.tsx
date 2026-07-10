@@ -13,7 +13,7 @@ import {
   COMPANY_HOURS,
   COMPANY_WHATSAPP
 } from '@/constants/navigation';
-import { Phone, Mail, MapPin, Clock, MessageSquare, CalendarRange, Send, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, CalendarRange, Send, CheckCircle2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import contactHeroImg from '@/assets/images/hero-construction.png';
 
@@ -163,8 +163,8 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="glass p-6 rounded-xl text-center flex flex-col items-center justify-center border border-gold/10 hover:border-gold/30 hover:scale-[1.03] transition-all duration-300 group"
             >
-              <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold border border-gold/25 mb-4 group-hover:scale-110 transition-transform">
-                <MessageSquare className="w-5 h-5" />
+              <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center border border-gold/25 mb-4 group-hover:scale-110 transition-transform overflow-hidden p-2.5">
+                <img src="/Whatsapp.avif" alt="WhatsApp" className="w-full h-full object-contain" />
               </div>
               <h3 className="text-base font-bold font-display text-ivory mb-1">WhatsApp Chat</h3>
               <p className="text-xs text-muted-foreground mb-3">Instant chat connection</p>
