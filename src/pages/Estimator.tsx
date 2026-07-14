@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+﻿import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { gsap } from 'gsap';
 import PageTransition from '@/components/layouts/PageTransition';
@@ -130,7 +130,7 @@ export default function Estimator() {
     "description": "Estimate your construction budget instantly using our AI-powered construction cost calculator.",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "All",
-    "url": "https://merinabuilders.in/estimator"
+    "url": "https://merinabuilders.com/estimator"
   };
 
   return (
@@ -411,7 +411,7 @@ export default function Estimator() {
                     </div>
                   </div>
 
-                  {/* 🏛️ Official Corporate Header */}
+                  {/* ðŸ›ï¸ Official Corporate Header */}
                   <div className="p-6 rounded-xl border border-gold/15 bg-navy-light/95 shadow-xl flex flex-col md:flex-row justify-between gap-6 animate-on-load">
                     {/* Left: Brand logo & name */}
                     <div className="flex items-start gap-4">
@@ -444,7 +444,7 @@ export default function Estimator() {
                     <div className="h-[2px] w-24 bg-gold mx-auto mt-3" />
                   </div>
 
-                  {/* 📊 Project Summary Column */}
+                  {/* ðŸ“Š Project Summary Column */}
                   <div className="glass p-6 rounded-xl border border-gold/10 bg-navy/40 space-y-4 animate-on-load">
                     <h3 className="text-sm font-bold text-gold uppercase tracking-widest border-b border-gold/10 pb-2 flex items-center gap-2">
                       <FileText className="w-4 h-4" /> Project Specification Summary
@@ -493,7 +493,7 @@ export default function Estimator() {
                     </div>
                   </div>
 
-                  {/* 💰 Financial Estimates Overview */}
+                  {/* ðŸ’° Financial Estimates Overview */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 animate-on-load">
                     <div className="glass p-5 rounded-xl border border-gold/15 bg-gold/5 flex flex-col justify-between">
                       <div>
@@ -526,7 +526,7 @@ export default function Estimator() {
                     </div>
                   </div>
 
-                  {/* 📊 Animated Cost Distribution Charts */}
+                  {/* ðŸ“Š Animated Cost Distribution Charts */}
                   <div className="glass p-6 rounded-xl border border-gold/10 bg-navy/40 space-y-4 animate-on-load">
                     <h3 className="text-sm font-bold text-gold uppercase tracking-widest border-b border-gold/10 pb-2">
                       Cost Allocation Breakdown
@@ -572,7 +572,7 @@ export default function Estimator() {
                     </div>
                   </div>
 
-                  {/* 🧾 Structured Cost Breakdown Table */}
+                  {/* ðŸ§¾ Structured Cost Breakdown Table */}
                   <div className="glass p-6 rounded-xl border border-gold/10 bg-navy/40 space-y-4 animate-on-load">
                     <h3 className="text-sm font-bold text-gold uppercase tracking-widest border-b border-gold/10 pb-2">
                       Structured Budget Breakdown
@@ -652,7 +652,7 @@ export default function Estimator() {
                     </div>
                   </div>
 
-                  {/* 💼 Next Steps Call-to-action */}
+                  {/* ðŸ’¼ Next Steps Call-to-action */}
                   <div className="glass p-6 rounded-xl border border-gold/15 bg-gradient-to-r from-gold/5 via-navy-light to-gold/5 flex flex-col md:flex-row justify-between items-center gap-6 animate-on-load">
                     <div>
                       <h4 className="text-base font-bold font-display text-ivory">Next Steps to Lock in Contract Pricing</h4>
@@ -673,7 +673,7 @@ export default function Estimator() {
                     </div>
                   </div>
 
-                  {/* 📜 Small AI disclaimer at the end */}
+                  {/* ðŸ“œ Small AI disclaimer at the end */}
                   <div className="text-center pt-6 border-t border-gold/10 animate-on-load">
                     <div className="inline-flex items-start gap-2.5 px-4 py-3 bg-gold/[0.02] border border-gold/15 rounded-lg max-w-2xl mx-auto text-left">
                       <AlertTriangle className="w-4 h-4 text-gold shrink-0 mt-0.5" />
@@ -692,3 +692,4 @@ export default function Estimator() {
     </PageTransition>
   );
 }
+

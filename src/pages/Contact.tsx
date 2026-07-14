@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import PageTransition from '@/components/layouts/PageTransition';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/button';
@@ -110,7 +110,7 @@ export default function Contact() {
     "@type": "ContactPage",
     "name": "Contact Merina Builders",
     "description": "Contact Merina Builders for commercial construction, project management, renovation, and construction estimates in Thanjavur and Kumbakonam.",
-    "url": "https://merinabuilders.in/contact"
+    "url": "https://merinabuilders.com/contact"
   };
 
   return (
@@ -397,3 +397,4 @@ export default function Contact() {
     </PageTransition>
   );
 }
+

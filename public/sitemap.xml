@@ -1,68 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Pages -->
   <url>
-    <loc>https://merinabuilders.in/</loc>
+    <loc>https://merinabuilders.com/</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/services</loc>
+    <loc>https://merinabuilders.com/services</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/projects</loc>
+    <loc>https://merinabuilders.com/projects</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/gallery</loc>
+    <loc>https://merinabuilders.com/gallery</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/estimator</loc>
+    <loc>https://merinabuilders.com/estimator</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/about</loc>
+    <loc>https://merinabuilders.com/about</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/faq</loc>
+    <loc>https://merinabuilders.com/faq</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/contact</loc>
+    <loc>https://merinabuilders.com/contact</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/our-process</loc>
+    <loc>https://merinabuilders.com/our-process</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/privacy-policy</loc>
+    <loc>https://merinabuilders.com/privacy-policy</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/terms</loc>
+    <loc>https://merinabuilders.com/terms</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -70,37 +70,37 @@
 
   <!-- Service Landing Pages -->
   <url>
-    <loc>https://merinabuilders.in/services/commercial-construction</loc>
+    <loc>https://merinabuilders.com/services/commercial-construction</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/services/residential-construction</loc>
+    <loc>https://merinabuilders.com/services/residential-construction</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/services/industrial-construction</loc>
+    <loc>https://merinabuilders.com/services/industrial-construction</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/services/renovation-remodeling</loc>
+    <loc>https://merinabuilders.com/services/renovation-remodeling</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/services/church-construction</loc>
+    <loc>https://merinabuilders.com/services/church-construction</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/services/project-management</loc>
+    <loc>https://merinabuilders.com/services/project-management</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -108,85 +108,85 @@
 
   <!-- Primary & Secondary Location Landing Pages -->
   <url>
-    <loc>https://merinabuilders.in/location/thanjavur</loc>
+    <loc>https://merinabuilders.com/location/thanjavur</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/kumbakonam</loc>
+    <loc>https://merinabuilders.com/location/kumbakonam</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/papanasam</loc>
+    <loc>https://merinabuilders.com/location/papanasam</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/pasupathikovil</loc>
+    <loc>https://merinabuilders.com/location/pasupathikovil</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/orathanadu</loc>
+    <loc>https://merinabuilders.com/location/orathanadu</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/pattukkottai</loc>
+    <loc>https://merinabuilders.com/location/pattukkottai</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/needamangalam</loc>
+    <loc>https://merinabuilders.com/location/needamangalam</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/thiruvidaimarudur</loc>
+    <loc>https://merinabuilders.com/location/thiruvidaimarudur</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/mannargudi</loc>
+    <loc>https://merinabuilders.com/location/mannargudi</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/thiruvarur</loc>
+    <loc>https://merinabuilders.com/location/thiruvarur</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/mayiladuthurai</loc>
+    <loc>https://merinabuilders.com/location/mayiladuthurai</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/nagapattinam</loc>
+    <loc>https://merinabuilders.com/location/nagapattinam</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/ariyalur</loc>
+    <loc>https://merinabuilders.com/location/ariyalur</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/location/peravurani</loc>
+    <loc>https://merinabuilders.com/location/peravurani</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -194,45 +194,46 @@
 
   <!-- Blog Index & Posts -->
   <url>
-    <loc>https://merinabuilders.in/blog</loc>
+    <loc>https://merinabuilders.com/blog</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/blog/choosing-right-construction-materials</loc>
+    <loc>https://merinabuilders.com/blog/choosing-right-construction-materials</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/blog/vastu-modern-homes</loc>
+    <loc>https://merinabuilders.com/blog/vastu-modern-homes</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/blog/sustainable-construction-2024</loc>
+    <loc>https://merinabuilders.com/blog/sustainable-construction-2024</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/blog/renovation-vs-rebuild</loc>
+    <loc>https://merinabuilders.com/blog/renovation-vs-rebuild</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/blog/smart-home-integration</loc>
+    <loc>https://merinabuilders.com/blog/smart-home-integration</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://merinabuilders.in/blog/construction-cost-management</loc>
+    <loc>https://merinabuilders.com/blog/construction-cost-management</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 </urlset>
+

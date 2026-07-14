@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { COMPANY_WHATSAPP } from '@/constants/navigation';
 
+// GA4 event helper
+function trackEvent(eventName: string, params?: Record<string, string>) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, params);
+  }
+}
+
 export default function WhatsAppCTA() {
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -29,6 +36,7 @@ export default function WhatsAppCTA() {
         href={COMPANY_WHATSAPP}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackEvent('whatsapp_click', { method: 'floating_button' })}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
         className="relative flex items-center justify-center w-16 h-16 rounded-full cursor-pointer z-10"

@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router';
+﻿import { useParams, Link, Navigate } from 'react-router';
 import { motion } from 'motion/react';
 import PageTransition from '@/components/layouts/PageTransition';
 import SEO from '@/components/ui/SEO';
@@ -23,10 +23,10 @@ export default function BlogPost() {
   const blogPostingSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "@id": `https://merinabuilders.in/blog/${post.id}#blogposting`,
+    "@id": `https://merinabuilders.com/blog/${post.id}#blogposting`,
     "headline": post.title,
     "description": post.excerpt,
-    "image": `https://merinabuilders.in${post.image}`,
+    "image": `https://merinabuilders.com${post.image}`,
     "datePublished": post.date,
     "dateModified": post.date,
     "author": {
@@ -43,12 +43,12 @@ export default function BlogPost() {
       "name": "Merina Builders Construction",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://merinabuilders.in/logo.png"
+        "url": "https://merinabuilders.com/logo.png"
       }
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://merinabuilders.in/blog/${post.id}`
+      "@id": `https://merinabuilders.com/blog/${post.id}`
     }
   };
 
@@ -187,3 +187,4 @@ export default function BlogPost() {
     </PageTransition>
   );
 }
+

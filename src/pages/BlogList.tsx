@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+﻿import { Link } from 'react-router';
 import { motion } from 'motion/react';
 import PageTransition from '@/components/layouts/PageTransition';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -12,20 +12,20 @@ export default function BlogList() {
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "@id": "https://merinabuilders.in/blog#blog",
+    "@id": "https://merinabuilders.com/blog#blog",
     "name": "Construction Insights & Guides | Merina Builders",
     "description": "Expert home construction guides, cost budgeting tips, Vastu planning advice, and sustainable engineering articles from Merina Builders Construction.",
     "publisher": {
       "@type": "Organization",
       "name": "Merina Builders Construction",
-      "logo": "https://merinabuilders.in/logo.png"
+      "logo": "https://merinabuilders.com/logo.png"
     },
     "blogPost": blogPosts.map((post) => ({
       "@type": "BlogPosting",
       "headline": post.title,
       "datePublished": post.date,
       "description": post.excerpt,
-      "url": `https://merinabuilders.in/blog/${post.id}`
+      "url": `https://merinabuilders.com/blog/${post.id}`
     }))
   };
 
@@ -134,3 +134,4 @@ export default function BlogList() {
     </PageTransition>
   );
 }
+

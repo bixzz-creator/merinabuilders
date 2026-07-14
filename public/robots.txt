@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://merinabuilders.in/sitemap.xml
+Sitemap: https://merinabuilders.com/sitemap.xml

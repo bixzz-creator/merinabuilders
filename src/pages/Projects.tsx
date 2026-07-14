@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import PageTransition from '@/components/layouts/PageTransition';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { projects } from '@/data/projects';
@@ -25,7 +25,7 @@ export default function Projects() {
     "@type": "WebPage",
     "name": "Completed Construction Projects | Merina Builders",
     "description": "Explore completed commercial, church, and renovation projects delivered by Merina Builders across Thanjavur and nearby districts.",
-    "url": "https://merinabuilders.in/projects"
+    "url": "https://merinabuilders.com/projects"
   };
 
   return (
@@ -132,8 +132,8 @@ export default function Projects() {
                             </p>
 
                             <div className="flex justify-between items-center text-xs text-muted-foreground border-t border-gold/15 pt-4 mb-2">
-                              <span>📍 {project.location}</span>
-                              <span>🗓️ Completed: {project.year}</span>
+                              <span>ðŸ“ {project.location}</span>
+                              <span>ðŸ—“ï¸ Completed: {project.year}</span>
                             </div>
 
                             <span className="text-xs text-gold font-bold tracking-widest uppercase flex items-center gap-1.5 pt-2">
@@ -213,3 +213,4 @@ export default function Projects() {
     </PageTransition>
   );
 }
+

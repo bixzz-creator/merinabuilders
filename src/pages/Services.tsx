@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import PageTransition from '@/components/layouts/PageTransition';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { motion } from 'motion/react';
@@ -216,7 +216,7 @@ export default function Services() {
     "@type": "WebPage",
     "name": "Construction Services | Merina Builders Construction",
     "description": "Explore Merina Builders' professional construction services including commercial construction, renovation, remodeling, project management, and engineering solutions.",
-    "url": "https://merinabuilders.in/services"
+    "url": "https://merinabuilders.com/services"
   };
 
   return (
@@ -342,7 +342,7 @@ export default function Services() {
                       </div>
                     </div>
 
-                    {/* Editorial Content Grid — Black & Gold */}
+                    {/* Editorial Content Grid â€” Black & Gold */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16 pt-16 border-t border-gold/10">
 
                       {/* Panel 1: Key Deliverables */}
@@ -466,3 +466,4 @@ export default function Services() {
     </PageTransition>
   );
 }
+

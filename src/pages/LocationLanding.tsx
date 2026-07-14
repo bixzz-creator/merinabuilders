@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router';
+﻿import { useParams, Link } from 'react-router';
 import { motion } from 'motion/react';
 import PageTransition from '@/components/layouts/PageTransition';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -157,12 +157,12 @@ export default function LocationLanding() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "additionalType": "https://schema.org/ConstructionCompany",
-    "@id": `https://merinabuilders.in/location/${info.id}#localbusiness`,
-    "name": `Merina Builders Construction — ${info.name}`,
+    "@id": `https://merinabuilders.com/location/${info.id}#localbusiness`,
+    "name": `Merina Builders Construction â€” ${info.name}`,
     "description": info.description,
-    "url": `https://merinabuilders.in/location/${info.id}`,
-    "logo": "https://merinabuilders.in/logo.png",
-    "image": "https://merinabuilders.in/logo.png",
+    "url": `https://merinabuilders.com/location/${info.id}`,
+    "logo": "https://merinabuilders.com/logo.png",
+    "image": "https://merinabuilders.com/logo.png",
     "telephone": "+91 99947 74598",
     "email": "merinabuilders@gmail.com",
     "priceRange": "Custom Quotations",
@@ -227,7 +227,7 @@ export default function LocationLanding() {
                   Your Trusted Construction Contractors in {info.name}
                 </h2>
                 <p className="text-sm sm:text-base text-ivory/80 leading-relaxed font-light text-justify">
-                  Established in 2011, <strong>Merina Builders Construction</strong> is proud to extend its premium civil engineering, cost estimation, and contracting operations to <strong>{info.name}</strong>. We deliver high-quality structures tailored to your specifications—combining architectural safety with exquisite luxury finishes.
+                  Established in 2011, <strong>Merina Builders Construction</strong> is proud to extend its premium civil engineering, cost estimation, and contracting operations to <strong>{info.name}</strong>. We deliver high-quality structures tailored to your specificationsâ€”combining architectural safety with exquisite luxury finishes.
                 </p>
                 <p className="text-sm sm:text-base text-ivory/80 leading-relaxed font-light text-justify">
                   Whether you are planning to build a <strong>custom luxury villa</strong>, a multi-storey <strong>commercial shopping complex</strong>, a <strong>sacred church assembly hall</strong>, or require <strong>waterproofing repairs and renovations</strong>, our team of certified engineers coordinates your build from layout drafting to the key handover.
@@ -380,3 +380,4 @@ export default function LocationLanding() {
     </PageTransition>
   );
 }
+

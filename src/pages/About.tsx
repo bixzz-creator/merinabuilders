@@ -1,4 +1,4 @@
-import PageTransition from '@/components/layouts/PageTransition';
+﻿import PageTransition from '@/components/layouts/PageTransition';
 import SectionHeading from '@/components/ui/SectionHeading';
 import LeadershipCard from '@/components/ui/LeadershipCard';
 import RevealOnScroll from '@/components/animations/RevealOnScroll';
@@ -18,7 +18,7 @@ export default function About() {
     "@type": "AboutPage",
     "name": "About Us | Merina Builders Construction",
     "description": "Learn about Merina Builders, our experienced engineers, skilled workforce, commitment to quality, and decades of trusted construction excellence.",
-    "url": "https://merinabuilders.in/about"
+    "url": "https://merinabuilders.com/about"
   };
 
   return (
@@ -221,7 +221,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Why Us — Value Propositions */}
+        {/* Why Us â€” Value Propositions */}
         <section className="section-padding bg-navy-light border-t border-gold/10">
           <div className="max-w-7xl mx-auto text-center">
             <SectionHeading
@@ -264,3 +264,4 @@ export default function About() {
     </PageTransition>
   );
 }
+

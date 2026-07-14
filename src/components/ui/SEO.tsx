@@ -1,6 +1,14 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 
+// Declare gtag on window for TypeScript
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+  }
+}
+
 interface SEOProps {
   title: string;
   description: string;
@@ -36,7 +44,7 @@ export default function SEO({ title, description, keywords, schema }: SEOProps) 
     }
 
     // 4. Update Canonical Link
-    const canonicalUrl = `https://merinabuilders.in${location.pathname === '/' ? '' : location.pathname}`;
+    const canonicalUrl = `https://merinabuilders.com${location.pathname === '/' ? '' : location.pathname}`;
     let linkCanonical = document.querySelector('link[rel="canonical"]');
     if (!linkCanonical) {
       linkCanonical = document.createElement('link');
@@ -51,7 +59,7 @@ export default function SEO({ title, description, keywords, schema }: SEOProps) 
       'og:description': description,
       'og:url': canonicalUrl,
       'og:type': 'website',
-      'og:image': 'https://merinabuilders.in/og-image.png',
+      'og:image': 'https://merinabuilders.com/og-image.png',
     };
 
     Object.entries(ogTags).forEach(([property, content]) => {
@@ -69,7 +77,7 @@ export default function SEO({ title, description, keywords, schema }: SEOProps) 
       'twitter:card': 'summary_large_image',
       'twitter:title': title,
       'twitter:description': description,
-      'twitter:image': 'https://merinabuilders.in/twitter-image.png',
+      'twitter:image': 'https://merinabuilders.com/twitter-image.png',
     };
 
     Object.entries(twitterTags).forEach(([name, content]) => {
@@ -104,13 +112,13 @@ export default function SEO({ title, description, keywords, schema }: SEOProps) 
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://merinabuilders.in"
+        "item": "https://merinabuilders.com"
       }
     ];
 
     pathSegments.forEach((segment, index) => {
       const segmentName = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-      const segmentUrl = `https://merinabuilders.in/${pathSegments.slice(0, index + 1).join('/')}`;
+      const segmentUrl = `https://merinabuilders.com/${pathSegments.slice(0, index + 1).join('/')}`;
       breadcrumbItems.push({
         "@type": "ListItem",
         "position": index + 2,
@@ -136,7 +144,17 @@ export default function SEO({ title, description, keywords, schema }: SEOProps) 
     breadcrumbScriptTag.type = 'application/ld+json';
     breadcrumbScriptTag.innerHTML = JSON.stringify(breadcrumbSchema);
     document.head.appendChild(breadcrumbScriptTag);
+
+    // 9. Fire GA4 page_view on SPA route change
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_title: title,
+        page_location: `https://merinabuilders.com${location.pathname}`,
+        page_path: location.pathname,
+      });
+    }
   }, [title, description, keywords, location.pathname, schema]);
 
   return null;
 }
+

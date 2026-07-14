@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router';
+﻿import { useParams, Link, Navigate } from 'react-router';
 import { motion } from 'motion/react';
 import PageTransition from '@/components/layouts/PageTransition';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -23,14 +23,14 @@ export default function ServiceDetail() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `https://merinabuilders.in/services/${service.id}#service`,
+    "@id": `https://merinabuilders.com/services/${service.id}#service`,
     "name": service.title,
     "description": service.intro,
     "provider": {
       "@type": "LocalBusiness",
       "name": "Merina Builders Construction",
       "telephone": "+91 99947 74598",
-      "url": "https://merinabuilders.in"
+      "url": "https://merinabuilders.com"
     },
     "areaServed": [
       { "@type": "AdministrativeArea", "name": "Tamil Nadu" },
@@ -226,3 +226,4 @@ export default function ServiceDetail() {
     </PageTransition>
   );
 }
+

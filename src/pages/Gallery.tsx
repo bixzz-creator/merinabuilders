@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import PageTransition from '@/components/layouts/PageTransition';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
@@ -13,18 +13,18 @@ interface GalleryImage {
 
 // Real images from Church folder (served from /gallery/church/)
 const churchImages: GalleryImage[] = [
-  { src: '/gallery/church/church-1.webp', title: 'Alangara Anni Church – Completed Project', category: 'Completed' },
-  { src: '/gallery/church/church-2.jpeg', title: 'Church Construction – Structural Work', category: 'Completed' },
-  { src: '/gallery/church/church-3.jpeg', title: 'Church Project – Exterior View', category: 'Completed' },
-  { src: '/gallery/church/church-4.jpeg', title: 'Church Project – Construction Progress', category: 'Completed' },
+  { src: '/gallery/church/church-1.webp', title: 'Alangara Anni Church â€“ Completed Project', category: 'Completed' },
+  { src: '/gallery/church/church-2.jpeg', title: 'Church Construction â€“ Structural Work', category: 'Completed' },
+  { src: '/gallery/church/church-3.jpeg', title: 'Church Project â€“ Exterior View', category: 'Completed' },
+  { src: '/gallery/church/church-4.jpeg', title: 'Church Project â€“ Construction Progress', category: 'Completed' },
 ];
 
 // Real images from Openings folder (served from /gallery/openings/)
 const openingImages: GalleryImage[] = [
   { src: '/gallery/openings/opening-1.jpeg', title: 'Building Opening Ceremony', category: 'Openings' },
-  { src: '/gallery/openings/opening-2.jpeg', title: 'Inauguration Event – Completed Project', category: 'Openings' },
+  { src: '/gallery/openings/opening-2.jpeg', title: 'Inauguration Event â€“ Completed Project', category: 'Openings' },
   { src: '/gallery/openings/opening-3.jpeg', title: 'Ribbon Cutting Ceremony', category: 'Openings' },
-  { src: '/gallery/openings/opening-4.jpeg', title: 'Opening Celebration – Guests & Team', category: 'Openings' },
+  { src: '/gallery/openings/opening-4.jpeg', title: 'Opening Celebration â€“ Guests & Team', category: 'Openings' },
 ];
 
 const allImages: GalleryImage[] = [...churchImages, ...openingImages];
@@ -81,7 +81,7 @@ export default function Gallery() {
     "@type": "WebPage",
     "name": "Project Gallery | Merina Builders",
     "description": "View our completed construction projects, church buildings, commercial spaces, and inauguration ceremonies.",
-    "url": "https://merinabuilders.in/gallery"
+    "url": "https://merinabuilders.com/gallery"
   };
 
   return (
@@ -165,7 +165,7 @@ export default function Gallery() {
                     <h3 className="text-lg font-bold font-display text-ivory tracking-wide">
                       {img.title}
                     </h3>
-                    <span className="text-xs text-gold/80 mt-2 font-semibold">🔍 Expand Photo</span>
+                    <span className="text-xs text-gold/80 mt-2 font-semibold">ðŸ” Expand Photo</span>
                   </div>
                 </div>
               ))}
@@ -203,3 +203,4 @@ export default function Gallery() {
     </PageTransition>
   );
 }
+
